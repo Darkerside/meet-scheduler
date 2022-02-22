@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar .userinfo span:first-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.navbar .userinfo span {
+  font-size: 12px;
+}
+
+.navbar div.dropdown-item {
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #4da3ff;
+}
+
+.card-info.fill-height {
+  max-height: calc(100vh - 213px);
+}
+
+.card-body.bg-custom-light {
+  background-color: #f4f6f9 !important;
+  max-height: 456px;
+  overflow: auto;
+}
+
+.card-body.bg-custom-light.fill {
+  max-height: -webkit-fill-available;
+}
+
+/* width */
+.card-body.bg-custom-light::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.card-body.bg-custom-light::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* Handle */
+.card-body.bg-custom-light::-webkit-scrollbar-thumb {
+  background: #53d872;
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.card-body.bg-custom-light::-webkit-scrollbar-thumb:hover {
+  background: #29a746;
+}
+
+.card-body h3 {
+  font-weight: 600;
+}
+
+span.meet-header {
+  min-width: 70px;
+  font-weight: 500;
+  display: inline-block;
+}
+
+span.meet-header.normal {
+  font-weight: 400 !important;
+  display: inline-block;
+}
+
+.modal-body .meet-detail-header {
+  margin: -1rem -1.04rem 0 -1rem !important;
+  padding: 1.5rem 3rem !important;
+  border-radius: 3px 3px 0 0;
+  background: #29a746;
+  color: white;
+}
+
+.modal-body .meet-detail-header.modal-blue {
+  background: #007bff;
+}
+
+.modal-body .meet-detail-header a,
+.modal-body .meet-detail-header i.fas {
+  color: #dddddd !important;
+}
+
+.modal-body .meet-detail-section {
+  padding: 1rem;
+  background: #53d872;
+  color: white;
+  border-radius: 4px;
+}
+
+.modal-body .meet-detail-section.modal-blue {
+  background: #4da3ff;
+}
+
+.modal-body #participants .card-header {
+  background: #ceffd9;
+}
+
+.modal-body #participants .card-header.modal-blue {
+  background: #c9e3ff;
+}
+
+.card-meet-icon {
+  margin: -1.3rem 0 -1.25rem -1.25rem;
+  background-color: #007bff;
+  border-radius: 0px 0 0 4px;
+}
+
+.card-meet-icon i {
+  font-size: 4rem;
+}
+
+.card-meet-summary {
+  margin-right: -1.25rem;
+  padding: 0 1.25rem;
+}
+
+.custom-close {
+  display: inline-block;
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  padding: 2px;
+  color: #a3a3a3;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.custom-close:hover {
+  color: #616161;
+}
