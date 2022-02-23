@@ -19,8 +19,8 @@ class Meets extends MY_Controller
     $data['userMeets'] = $meetList;
     $data['divisionMeets'] = false;
 
-    $data['page'] = "Meet List";
-    $data['menu'] = "Meets";
+    $data['page'] = "My Meet List";
+    $data['menu'] = "My Meets";
     $data['user'] = $this->session->userdata();
 
     $this->template->add_js('application/modules/meets/assets/js/scripts.js');
@@ -73,7 +73,7 @@ class Meets extends MY_Controller
     $this->template->add_css('assets/plugins/summernote/summernote-bs4.min.css');
 
     $data['page'] = "Create New Meet";
-    $data['menu'] = "Meets";
+    $data['menu'] = "My Meets";
     $data['user'] = $this->session->userdata();
     $data['internalTable'] = array();
     $data['externalTable'] = array();
@@ -103,7 +103,7 @@ class Meets extends MY_Controller
 
 
     $data['page'] = "Edit Meet";
-    $data['menu'] = "Meets";
+    $data['menu'] = "My Meets";
     $data['user'] = $this->session->userdata();
     $data['meet'] = $meet;
     $data['division_dropdown'] = $this->Divisions_model->getAll(array('is_active' => 1));

@@ -27,6 +27,11 @@ class Mailer extends MY_Controller
     $password = $this->Configuration_model->get(array("variable" => "Password"));
     $subject = $this->Configuration_model->get(array("variable" => "Subject"));
     $name = $this->Configuration_model->get(array("variable" => "Name"));
+    $mail_type = $this->Configuration_model->get(array("variable" => "Mail Type"));
+    $charset = $this->Configuration_model->get(array("variable" => "Charset"));
+    $protocol = $this->Configuration_model->get(array("variable" => "Protocol"));
+    $host = $this->Configuration_model->get(array("variable" => "Server URI"));
+    $port = $this->Configuration_model->get(array("variable" => "Server Port"));
 
     $jwt = $password->value;
     $decode = json_decode(base64_decode(str_replace('_', '/', str_replace('-', '+', explode('.', $jwt)[1]))));
@@ -45,13 +50,13 @@ class Mailer extends MY_Controller
     $data->users = $this->Members_model->getAll($filter);
 
     $config = [
-      'mailtype'  => 'html',
-      'charset'   => 'utf-8',
-      'protocol'  => 'smtp',
-      'smtp_host' => 'ssl://smtp.googlemail.com',
+      'mailtype'  => $mail_type,
+      'charset'   => $charset,
+      'protocol'  => $protocol,
+      'smtp_host' => $host,
       'smtp_user' => $email->value,  // Email gmail
       'smtp_pass'   => $decodePassword,  // Password gmail
-      'smtp_port'   => 465,
+      'smtp_port'   => intval($port),
       // 'crlf'    => "\r\n",
       // 'newline' => "\r\n"
     ];

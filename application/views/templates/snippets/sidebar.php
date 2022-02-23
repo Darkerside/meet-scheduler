@@ -22,10 +22,10 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="<?= base_url('meets') ?>" class="nav-link <?php echo ($menu == 'Meets') ? 'active' : '' ?>">
+          <a href="<?= base_url('meets') ?>" class="nav-link <?php echo ($menu == 'My Meets') ? 'active' : '' ?>">
             <i class="nav-icon far fa-calendar-alt"></i>
             <p>
-              Meets
+              My Meets
             </p>
           </a>
         </li>

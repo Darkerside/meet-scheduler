@@ -2,6 +2,7 @@ $(document).ready(async function () {
 
   $('#change-password').submit(async function (ev) {
     ev.preventDefault();
+    const url = (window.location.href.includes('management') || window.location.href.includes('division') || window.location.href.includes('new') || window.location.href.includes('edit')) ? `../management/users/change_password` : `./management/users/change_password`
     $(document.body).css({ 'cursor': 'wait' });
 
     const formData = {
@@ -13,13 +14,10 @@ $(document).ready(async function () {
 
     await $.ajax({
       type: "POST",
-      //set the data type
       dataType: 'json',
-      url: '/management/users/change_password',
-      cache: false,
-      //set body
+      url,
       data: formData,
-      //check this in Firefox browser
+      cache: false,
       success: function () { showSuccess() },
       error: function (response) { showError(response) }
     });
